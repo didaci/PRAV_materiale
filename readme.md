@@ -1,12 +1,7 @@
 
 
-# [IA/0220] FONDAMENTI DI INFORMATICA
-
-Corsi di Laurea:
-
-- INGEGNERIA DELL’ENERGIA ELETTRICA PER LO SVILUPPO SOSTENIBILE 
-- INGEGNERIA MECCANICA E GESTIONALE
-
+# [IA/0283] PROGRAMMAZIONE AVANZATA
+Corso di Laurea: INGEGNERIA ELETTRONICA, INFORMATICA E DELLE TELECOMUNICAZIONI
 
 
 ---
@@ -15,7 +10,7 @@ Corsi di Laurea:
 
 Il materiale didattico (dispense e codice Python) è disponibile tramite questo repository.
 
-Codice Python-> `src`
+Codice -> `src`
 
 Slides -> `Slides`
 
