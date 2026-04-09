@@ -1,0 +1,3 @@
+/Users/didaci/Documents/Didattica/Corsi (materiale)/PAIS/Slides/05_modularity_in_c/code/factorial_1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/didaci/Documents/Didattica/Corsi (materiale)/PAIS/Slides/05_modularity_in_c/code/factorial_1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/didaci/Documents/Didattica/Corsi (materiale)/PAIS/Slides/05_modularity_in_c/code/factorial_1/cmake-build-debug/CMakeFiles/factorial_1.dir

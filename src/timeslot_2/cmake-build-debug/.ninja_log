@@ -1,0 +1,6 @@
+# ninja log v5
+0	62	1634224364944931857	CMakeFiles/timeslot_2.dir/main.c.o	60bc48b9946d4a2f
+0	63	1634224364945759678	CMakeFiles/timeslot_2.dir/timeslot.c.o	570b51cfffd1a854
+63	145	1634224365030212627	timeslot_2	14a3a4cc1204c9a
+1	64	1634224432896425747	CMakeFiles/timeslot_2.dir/timeslot.c.o	570b51cfffd1a854
+64	148	1634224432982293515	timeslot_2	14a3a4cc1204c9a

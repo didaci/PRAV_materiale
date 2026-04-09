@@ -1,0 +1,5 @@
+# ninja log v5
+0	39	1634202097019415760	CMakeFiles/factorial_1.dir/mymath.c.o	a553569c8f27e4c1
+0	58	1634202134477621532	CMakeFiles/factorial_1.dir/main.c.o	4e44272981ee454c
+0	59	1634202134477782250	CMakeFiles/factorial_1.dir/mymath.c.o	a553569c8f27e4c1
+59	140	1634202134562598148	factorial_1	10708785b5e32d99

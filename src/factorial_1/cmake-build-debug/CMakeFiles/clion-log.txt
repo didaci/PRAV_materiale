@@ -1,0 +1,4 @@
+"/Users/didaci/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.4631.3/CLion 2021.3 EAP.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/didaci/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/213.4631.3/CLion 2021.3 EAP.app/Contents/bin/ninja/mac/ninja" -G Ninja "/Users/didaci/Documents/Didattica/Corsi (materiale)/PAIS/Slides/05_modularity_in_c/code/factorial_1"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/didaci/Documents/Didattica/Corsi (materiale)/PAIS/Slides/05_modularity_in_c/code/factorial_1/cmake-build-debug
