@@ -1,4 +1,4 @@
-
+// customer_02 customerModule.c
 
 #include "customerModule.h"
 #include <stdio.h>

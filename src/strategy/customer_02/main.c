@@ -1,3 +1,5 @@
+// customer_02 main.c
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Ask for customer's name, type (gold, silver, bronze)
  * (and, optionally, for other data)
