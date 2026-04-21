@@ -1,35 +1,18 @@
-# ========== Python ==========
-__pycache__/
-*.py[cod]
+# Ignora tutto di default
+*
 
-# Virtual environments
-.venv/
-venv/
+# Permetti root
+!README.md
 
-# ========== IDE ==========
-.idea/
-*.iml
+# Permetti cartelle principali
+!assets/
+!Slides/
+!src/
 
-# ========== macOS ==========
-.DS_Store
+# Permetti tutto dentro assets e Slides
+!assets/**
+!Slides/**
 
-# ========== Testing / tooling ==========
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-
-# ========== Build / packaging ==========
-build/
-dist/
-*.egg-info/
-
-# ========== Jupyter ==========
-.ipynb_checkpoints/
-
-# ========== Env / secrets ==========
-.env
-
-# ========== Altri ==========
-
-requirements.txt
-
+# In src: permetti solo .c e .h
+!src/**/*.c
+!src/**/*.h
