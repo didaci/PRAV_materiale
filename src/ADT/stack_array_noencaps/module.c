@@ -1,5 +1,7 @@
 // ADT/stack_array_noencasp/module.c
 
+#include <stdlib.h>
+#include <stdio.h>
 #include <assert.h>
 #include "module.h"
 

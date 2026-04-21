@@ -16,8 +16,14 @@
 #ifndef MODULE_H
 #define MODULE_H
 #include <stdbool.h>
-#include <stdlib.h>
-#include <stdio.h>
+
+/*
+ * il .h deve incliudere altri .h  solo se strettamente necessario.
+ * La libreria <stdbool.h> definisce
+ *    il tipo di dato booleano bool
+ *    le costanti true (1) e false (0).
+ * Viene usato dall'interfaccia, quindi è necessario includerlo
+ */
 
 /* STACK_MAX_SIZE -> capacity of the Static Stack
  * STACK_MAX_SIZE is part of the interface
@@ -25,12 +31,10 @@
  */
 #define STACK_MAX_SIZE 1000
 
-typedef struct stack  Stack;
-
-struct stack {
+typedef struct stack {
     int stackArray[STACK_MAX_SIZE];
     int top;
-};
+}Stack;
 
 // Function prototypes
 
