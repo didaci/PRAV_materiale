@@ -1,18 +1,21 @@
-# Ignora tutto di default
+# Ignora tutto
 *
 
-# Permetti root
+# File/cartelle da sincronizzare in root
 !README.md
-
-# Permetti cartelle principali
+!readme.md
 !assets/
 !Slides/
 !src/
 
-# Permetti tutto dentro assets e Slides
+# Tutto dentro assets e Slides
 !assets/**
 !Slides/**
 
-# In src: permetti solo .c e .h
+# Permetti tutte le sottocartelle di src
+!src/**/
+
+# In src, solo file sorgente
 !src/**/*.c
 !src/**/*.h
+!src/**/*.py
