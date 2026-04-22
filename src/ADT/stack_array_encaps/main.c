@@ -1,4 +1,4 @@
-// ADT/stack_array_noencasp/main.c
+// ADT/stack_array_encasp/main.c
 
 #include <stdio.h>
 #include <assert.h>
@@ -10,7 +10,7 @@ void use(void);
 int main (){
     int choice;
 
-    printf("STATIC STACK");
+    printf("DYNAMIC STACK - full encapsulation.");
     printf("\nChoose any of the following options:\n");
     printf("   1: Automatic test            2: Use \n");
     scanf("%d", &choice);
@@ -31,7 +31,11 @@ void use(void){
     int choice=0;
     int value;
     Stack * s;
-    s= initStack();
+    s = initStack(50);
+    if (s == NULL) {
+        printf("Memory allocation failed!\n");
+        return;
+    }
     //s->stackArray[0]=10;
     //s->top=0;
 
@@ -46,16 +50,30 @@ void use(void){
             case 0: break;
             case 1: {
                 printf("PUSH -Insert a value\n"); scanf("%d", &value);
-                push(s,value); show(s);
+                if (!push(s, value)) {
+                    printf("PUSH failed: stack FULL\n");
+                }
+                show(s);
                 break;
             }
             case 2: {
-                printf("POP->%d\n",pop(s));
+                if (pop(s, &value)) {
+                    printf("POP->%d\n", value);
+                }
+                else {
+                    printf("POP failed: stack EMPTY\n");
+                }
                 show(s);
                 break;
             }
             case 3: {
-                printf("PEEK->%d\n",peek(s));show(s);
+                if (peek(s, &value)) {
+                    printf("PEEK->%d\n", value);
+                }
+                else {
+                    printf("PEEK failed: stack EMPTY\n");
+                }
+                show(s);
                 break;
             }
             case 4: {
@@ -64,7 +82,11 @@ void use(void){
             }
             case 5: {
                 deleteStack(s);
-                s= initStack();
+                s = initStack(50);
+                if (s == NULL) {
+                    printf("Memory allocation failed!\n");
+                    return;
+                }
                 break;
             }
             case 6: {
