@@ -1,4 +1,4 @@
-// ADT/stack_array_encasp/module.h
+// ADT/stack_array_encaps/module.h
 
 /* STACK
 * Implementazione: array dinamico

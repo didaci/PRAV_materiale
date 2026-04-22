@@ -1,4 +1,4 @@
-// ADT/stack_array_noencasp/module.c
+// ADT/stack_array_noencaps/module.c
 
 #include <stdlib.h>
 #include <stdio.h>

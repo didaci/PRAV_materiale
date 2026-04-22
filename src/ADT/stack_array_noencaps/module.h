@@ -1,4 +1,4 @@
-// ADT/stack_array_noencasp/module.h
+// ADT/stack_array_noencaps/module.h
 
 /* STACK
 * Implementazione: array statico
@@ -18,7 +18,7 @@
 #include <stdbool.h>
 
 /*
- * il .h deve incliudere altri .h  solo se strettamente necessario.
+ * il .h deve includere altri .h  solo se strettamente necessario.
  * La libreria <stdbool.h> definisce
  *    il tipo di dato booleano bool
  *    le costanti true (1) e false (0).

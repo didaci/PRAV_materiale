@@ -1,4 +1,4 @@
-// ADT/stack_array_encasp/module.c
+// ADT/stack_array_encaps/module.c
 
 #include <stdlib.h>
 #include <stdio.h>

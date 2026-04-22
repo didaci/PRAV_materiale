@@ -1,4 +1,4 @@
-// ADT/stack_array_encasp/main.c
+// ADT/stack_array_encaps/main.c
 
 #include <stdio.h>
 #include <assert.h>
