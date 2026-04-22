@@ -109,4 +109,5 @@ void use(void){
 
     // Don't forget to free the memory!
     deleteStack(s);
+    s=NULL;
 }
