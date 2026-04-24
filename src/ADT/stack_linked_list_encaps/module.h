@@ -1,4 +1,4 @@
-// ADT/stack_linked_list_noencaps/module.h
+// ADT/stack_linked_list_encaps/module.h
 
 
 #ifndef MODULE_H
@@ -6,16 +6,9 @@
 
 #include <stdbool.h>
 
-typedef struct node {
-    int value;
-    struct node *next;
-} Node;
 
-typedef struct stack {
-    Node *head;
-    int numberOfElements; // opzionale
-    // altri campi opzionali
-} Stack;
+
+typedef struct stack Stack;
 
 // Function prototypes
 Stack *initStack(void);
