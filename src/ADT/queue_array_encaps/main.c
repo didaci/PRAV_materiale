@@ -6,7 +6,7 @@
 
 int main() {
     int value;
-    Queue *queue = initializeQueue();
+    Queue *queue = initializeQueue(5);
     if (queue == NULL) {
         printf("Unable to initialize queue.\n");
         return 1;

@@ -4,21 +4,31 @@
 #include <stdlib.h>
 #include "module.h"
 
-#define MAX_SIZE 100
-
 struct queue {
-    int data[MAX_SIZE];
+    int *data;
     int FRONT, TAIL;
+    int capacity;
 };
 
-Queue *initializeQueue(void) {
+Queue *initializeQueue(int capacity) {
+    if (capacity <= 0) {
+        return NULL;
+    }
+
     Queue *queue = malloc(sizeof(Queue));
     if (queue == NULL) {
         return NULL;
     }
 
+    queue->data = malloc((size_t) capacity * sizeof(int));
+    if (queue->data == NULL) {
+        free(queue);
+        return NULL;
+    }
+
     queue->FRONT = -1;
     queue->TAIL = -1;
+    queue->capacity = capacity;
     return queue;
 }
 
@@ -31,7 +41,7 @@ bool isFull(const Queue *queue) {
         return false;
     }
 
-    return (queue->TAIL + 1) % MAX_SIZE == queue->FRONT;
+    return (queue->TAIL + 1) % queue->capacity == queue->FRONT;
 }
 
 bool enqueue(Queue *queue, int value) {
@@ -43,7 +53,7 @@ bool enqueue(Queue *queue, int value) {
         queue->FRONT = 0;
         queue->TAIL = 0;
     } else {
-        queue->TAIL = (queue->TAIL + 1) % MAX_SIZE;
+        queue->TAIL = (queue->TAIL + 1) % queue->capacity;
     }
     queue->data[queue->TAIL] = value;
 
@@ -61,10 +71,19 @@ bool dequeue(Queue *queue, int *value) {
         queue->FRONT = -1;
         queue->TAIL = -1;
     } else {
-        queue->FRONT = (queue->FRONT + 1) % MAX_SIZE;
+        queue->FRONT = (queue->FRONT + 1) % queue->capacity;
     }
 
     return true;
+}
+
+void deleteQueue(Queue *queue) {
+    if (queue == NULL) {
+        return;
+    }
+
+    free(queue->data);
+    free(queue);
 }
 
 void display(const Queue *queue) {
@@ -77,11 +96,7 @@ void display(const Queue *queue) {
     int i = queue->FRONT;
     do {
         printf("%d ", queue->data[i]);
-        i = (i + 1) % MAX_SIZE;
-    } while (i != (queue->TAIL + 1) % MAX_SIZE);
+        i = (i + 1) % queue->capacity;
+    } while (i != (queue->TAIL + 1) % queue->capacity);
     printf("\n");
-}
-
-void deleteQueue(Queue *queue) {
-    free(queue);
 }

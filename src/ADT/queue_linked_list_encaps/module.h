@@ -1,5 +1,4 @@
-// ADT/queue_array_encaps/module.h
-
+// ADT/queue_linked_list_encaps/module.h
 #ifndef MODULE_H
 #define MODULE_H
 
@@ -7,15 +6,12 @@
 
 typedef struct queue Queue;
 
-Queue *initializeQueue(int capacity);
 
+Queue *initializeQueue(void);
 bool isEmpty(const Queue *queue);
 bool isFull(const Queue *queue);
-
 bool enqueue(Queue *queue, int value);
 bool dequeue(Queue *queue, int *value);
-
-void display(const Queue *queue);
 void deleteQueue(Queue *queue);
-
+void show(const Queue *queue);  // DEBUG ONLY
 #endif
