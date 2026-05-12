@@ -19,3 +19,4 @@
 !src/**/*.c
 !src/**/*.h
 !src/**/*.py
+src/ADT/lezione.c
