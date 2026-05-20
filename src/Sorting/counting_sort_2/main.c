@@ -1,3 +1,5 @@
+// Sorting/counting_sort_2
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -22,14 +24,16 @@ void counting_sort(int *vett, int nEl) {
     int *count = malloc(range * sizeof(*count));
     for ( i = 0; i < range; i++) count[i] = 0;
 
+    // start snippet count
     // Count the occurrences of each element
     for (i = 0; i < nEl; i++) {
         value = vett[i];
-
         idx = value - min; // remap
         count[idx]++;
     }
+    // end snippet count
 
+    // start snippet build_array
     // Build the sorted array
     i = 0;
     for (idx = 0; idx < range; idx++) {
@@ -39,6 +43,7 @@ void counting_sort(int *vett, int nEl) {
             count[idx]--;
         }
     }
+    // end snippet build_array
 
     // Free the allocated memory
     free(count);

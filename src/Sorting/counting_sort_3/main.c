@@ -1,14 +1,18 @@
+// Sorting/counting_sort_3
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
+// start snippet structures
 // Sort Structures
-
 typedef struct {
     int index;  // The integer field used for sorting
     int v1;
     float v2;
     // other fields
 } Element;
+// end snippet structures
 
 
 void printArray(Element *v, int n) {
@@ -31,6 +35,7 @@ void counting_sort(Element *vett, int nEl) {
     int *count = malloc(range * sizeof(*count));
     for (int i = 0; i < range; i++) count[i] = 0;
 
+    // start snippet count
     // Count the occurrences of each element
     for (i = 0; i < nEl; i++) {
         value = vett[i].index;
@@ -38,22 +43,23 @@ void counting_sort(Element *vett, int nEl) {
         count[idx]++;
     }
 
-
     // Cumulative occurrences 
     for (idx = 1; idx < range; idx++) {
         count[idx] += count[idx - 1];
     }
+    // end snippet count
 
+
+    // start snippet build_array
     // Build the sorted array
     Element *output = malloc(nEl * sizeof(*output));
     for (i = nEl - 1; i >= 0; i--) {
-        
         idx = vett[i].index - min;
         k = count[idx] - 1;
         output[k] = vett[i];
         count[idx]--;
     }
-
+    // end snippet build_array
     // Copy the sorted elements back to the original array - NEW
     for (i = 0; i < nEl; i++) {
         vett[i] = output[i];

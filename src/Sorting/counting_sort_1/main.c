@@ -1,3 +1,5 @@
+// Sorting/counting_sort_1
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +14,7 @@ void printArray(int *v, int n) {
 
 void counting_sort(int *vett, int nEl) {
     int i, j, idx;
-    int min = vett[0], max = vett[0];
+    int min = vett[0], max = vett[0], value;
     for (i = 1; i < nEl; i++) {
         // determino il range
         min = (vett[i] < min) ? vett[i] : min;
@@ -24,14 +26,18 @@ void counting_sort(int *vett, int nEl) {
     //int *presence = malloc(range * sizeof(*presence ));
     for (i = 0; i < range; i++) presence[i] = 0;
 
+
+
+    // start snippet presence
     // Mark the presence of each element
-
     for (i = 0; i < nEl; i++) {
-        j = vett[i] - min;
-        presence[j] = 1;
+        value = vett[i];
+        idx = value - min;
+        presence[idx] = 1;
     }
+    // end snippet presence
 
-
+    // start snippet build_array
     // Build the sorted array
     idx = 0;
     for (i = 0; i < range; i++) {
@@ -41,6 +47,7 @@ void counting_sort(int *vett, int nEl) {
 
         }
     }
+    // end snippet build_array
 
     // Free the allocated memory
     // free(presence);
